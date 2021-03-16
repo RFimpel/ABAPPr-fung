@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service BookingExtended'
+define service Z_119H_BookingExtended {
+  expose ZC_119H_BookingExtended;
+}

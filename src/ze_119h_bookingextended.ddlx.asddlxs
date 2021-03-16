@@ -1,0 +1,99 @@
+@Metadata.layer: #CORE
+@UI.headerInfo:{
+    typeName: 'Booking',
+    typeNamePlural: 'Bookings'
+    }
+@UI.headerInfo.title.value: 'TravelId'
+@UI.headerInfo.description.value: 'BookingId'
+annotate view ZC_119H_BookingExtended with
+{
+  @UI.facet: [ { id:'idGeneralInformation' ,
+                          type: #COLLECTION ,
+                          label: 'Booking' ,
+                          position: 0 } ,
+                        { type: #IDENTIFICATION_REFERENCE ,
+                          label : 'Information',
+                          parentId: 'idGeneralInformation' ,
+                          id: 'idIdentification' } ]
+  @UI:{
+        lineItem: [{ position: 10, label: 'Travel Id' }],
+        identification: [{ position: 10 }]
+  }
+  TravelId;
+  @UI:{
+
+      lineItem: [{ position: 20, label: 'Booking Id' }],
+      identification: [{ position: 20 }]
+  }
+  BookingId;
+  @UI:{
+
+
+      identification: [{ position: 30 }]
+  }
+  @EndUserText.label: 'Booking Date'
+  BookingDate;
+  @UI:{
+
+      identification: [{ position: 40 }]
+  }
+  @EndUserText.label: 'Customer Id'
+  CustomerId;
+  @UI:{
+      selectionField: [{ position: 10 }],
+      lineItem: [{ position: 30, label: 'Carrier Id' }],
+      identification: [{ position: 50 }]
+  }
+  CarrierId;
+  @UI:{
+      selectionField: [{ position: 20 }],
+      lineItem: [{ position: 40, label: 'Connection Id' }],
+      identification: [{ position: 60 }]
+  }
+  ConnectionId;
+  @UI:{
+      selectionField: [{ position: 30 }],
+      lineItem: [{ position: 50, label: 'Flight Date' }],
+      identification: [{ position: 70 }]
+  }
+  @EndUserText.label: 'Flight Date'
+  FlightDate;
+  @UI:{
+
+
+      identification: [{ position: 80 }]
+  }
+  @EndUserText.label: 'Flight Price'
+  FlightPrice;
+  @UI.hidden: true
+  CurrencyCode;
+  @UI:{
+
+
+      identification: [{ position: 90 }]
+  }
+  @EndUserText.label: 'Plane Type Id'
+  PlaneTypeId;
+  @UI:{
+
+
+      identification: [{ position: 100 }]
+  }
+  @EndUserText.label: 'Maximum Seats'
+  MaximumSeats;
+  @UI:{
+
+
+      identification: [{ position: 110 }]
+  }
+  @EndUserText.label: 'Occupied Seats'
+  OccupiedSeats;
+  @UI:{
+
+
+      identification: [{ position: 120 }]
+  }
+  @EndUserText.label: 'Free Seats'
+  FreeSeats;
+
+}
